@@ -6,21 +6,20 @@ class Rope{
        stifness:2,
        length:10
 }
+this.pointB = pointB
 this.chain = Constraint.create(options);
 World.add(world,this.chain);
 
 
 }
 display(){
-    var bodyA = this.chain.bodyA.position;
-    var pointB = this.chain.pointB.position;
-    push();
-    translate(bodyA.x,bodyA.y,pointB.x,pointB.y);
-   // stroke("black");
-   // fill("white");
-   // rectMode(CENTER);
-    line(bodyA.x,bodyA.y,pointB.x,pointB.y);
-    pop();
+    if(this.chain.bodyA){
+    var pointA = this.chain.bodyA.position;
+    var pointB = this.pointB;
+   
+
+    line(pointA.x,pointA.y,pointB.x,pointB.y);
+}
 
 }
 }

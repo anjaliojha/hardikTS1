@@ -1,5 +1,5 @@
 class Polygon{
-    constructor(x,y,width,height,options){
+    constructor(x,y,width,height){
        var options = {
        isStatic : true,
        restitution : 0.3,

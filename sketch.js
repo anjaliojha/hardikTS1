@@ -36,12 +36,13 @@ box15 = new Block(435+240,170,70,80);
 
 polygon = new Polygon(40,350,80,80);
 
-rope1 = new Rope({x:40,y:250},polygon.body);
+rope1 = new Rope(polygon.body,{x:200,y:100});
 
 
 }
 
 function draw(){
+
 background("black")
 
 Engine.update(engine)
@@ -62,6 +63,7 @@ box12.display();
 box13.display();
 box14.display();
 box15.display();
+
 polygon.display();
 rope1.display();
 
@@ -69,7 +71,7 @@ rope1.display();
 
 
 
-console.log(box1.body.position.y);
+//console.log(box1.body.position.y);
 
 
 
